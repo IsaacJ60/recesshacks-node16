@@ -1,0 +1,33 @@
+.screenings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .screening-card {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .screening-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .screening-content {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .screenings-header {
+    font-weight: 600;
+    font-size: 3vw;
+    color: white;
+    text-transform: capitalize;
+  }
