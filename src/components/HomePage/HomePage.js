@@ -7,7 +7,7 @@ function HomePage() {
     <div>
             <Link to="/help" className="help-button">Help</Link>
 <div className="homepage">
-      <h1 className="title">Welcome to the Health Survey Portal</h1>
+      <h1 className="title">Welcome to the Survey Screen Portal</h1>
       <p className="description">Select a survey to begin:</p>
       <div className="button-container">
         <Link to="/general-survey">

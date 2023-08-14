@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './HealthSurvey.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HealthSurvey = () => {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const HealthSurvey = () => {
 
   return (
     <div className="health-survey-container">
-      <h2 className="health-survey-header">Health Survey</h2>
+      <h2 className="health-survey-header">SurveyScreen Female</h2>
       <div className="form-container">
         <form className="health-survey-form" onSubmit={handleSubmit}>
           <label>
