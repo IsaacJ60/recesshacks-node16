@@ -11,10 +11,10 @@ function HomePage() {
       <p className="description">Select a survey to begin:</p>
       <div className="button-container">
         <Link to="/general-survey">
-          <button className="button">General Survey</button>
+          <button className="button">Male Survey</button>
         </Link>
         <Link to="/women-survey">
-          <button className="button">Women's Survey</button>
+          <button className="button">Female Survey</button>
         </Link>
       </div>
     </div>

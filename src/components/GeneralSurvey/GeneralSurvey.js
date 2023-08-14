@@ -13,23 +13,19 @@ const HealthSurvey = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
-  const [cholesterolChecked, setCholesterolChecked] = useState('');
-  const [cholesterolLastChecked, setCholesterolLastChecked] = useState('');
-  const [visionChanges, setVisionChanges] = useState('');
+  const [overallHealth, setOverallHealth] = useState('');
+  const [sleepFrequency, setSleepFrequency] = useState('');
   const [exerciseFrequency, setExerciseFrequency] = useState('');
-  const [skinChanges, setSkinChanges] = useState('');
+  const [medications, setMedications] = useState('');
   const [smoker, setSmoker] = useState('');
   const [alcoholConsumption, setAlcoholConsumption] = useState('');
-  const [weightChanges, setWeightChanges] = useState('');
-  const [familyHistory, setFamilyHistory] = useState('');
-  const [colonoscopyHistory, setColonoscopyHistory] = useState('');
-  const [gastroSymptoms, setGastroSymptoms] = useState('');
-  const [STITest, setSTITest] = useState('');
-  const [respiratorySymptoms, setRespiratorySymptoms] = useState('');
-  const [boneDensityTest, setBoneDensityTest] = useState('');
-  const [urinaryChanges, setUrinaryChanges] = useState('');
-  const [mammogramHistory, setMammogramHistory] = useState('');
-  const [diabetesScreening, setDiabetesScreening] = useState('');
+  const [surgeries, setSurgeries] = useState('');
+  const [stress, setStress] = useState('');
+  const [healthConcerns, setHealthConcerns] = useState('');
+  const [history, setHistory] = useState('');
+  const [checkups, setCheckups] = useState('');
+  const [vaccinations, setVaccinations] = useState('');
+  const [sexual, setSexual] = useState('');
 
   return (
     <div className="health-survey-container">
@@ -37,7 +33,7 @@ const HealthSurvey = () => {
       <div className="form-container">
         <form className="health-survey-form" onSubmit={handleSubmit}>
           <label>
-            Name GENERAL SURVEY
+            Name
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
           </label>
           <br />
@@ -57,13 +53,24 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-            Have you ever had your cholesterol levels checked? If so, when was the last time and what was the level?
-            <input type="text" value={cholesterolChecked} onChange={(e) => setCholesterolChecked(e.target.value)} />
+          How would you rate your overall health?
+          <select value={overallHealth} onChange={(e) => setOverallHealth(e.target.value)}>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </label>
           <br />
           <label>
-            Are you experiencing any changes in your vision, such as blurriness or difficulty focusing?
-            <select value={visionChanges} onChange={(e) => setVisionChanges(e.target.value)}>
+          Do you engage in regular physical activity?
+            <select value={exerciseFrequency} onChange={(e) => setExerciseFrequency(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -71,16 +78,27 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-            How frequently do you engage in physical activity or exercise?
-            <input type="text" value={exerciseFrequency} onChange={(e) => setExerciseFrequency(e.target.value)} />
+          How many hours of sleep do you get on average each night?
+            <input type="number" value={sleepFrequency} onChange={(e) => setSleepFrequency(e.target.value)} />
           </label>
           <br />
           <label>
-            Have you noticed any unusual moles or skin changes on your body?
-            <select value={skinChanges} onChange={(e) => setSkinChanges(e.target.value)}>
+          How often do you consume alcoholic beverages?
+            <select value={alcoholConsumption} onChange={(e) => setAlcoholConsumption(e.target.value)}>
+              <option value="">Select</option>
+              <option value="very often">Very Often</option>
+              <option value="not often">Not Often</option>
+              <option value="never">Never</option>
+            </select>
+          </label>
+          <br />
+          <label>
+          Are you experiencing any changes in libido or sexual desire?
+            <select value={sexual} onChange={(e) => setSexual(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
+              <option value="unsure">Unsure</option>
             </select>
           </label>
           <br />
@@ -94,18 +112,28 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-            How often do you consume alcohol, and in what quantities?
-            <input type="text" value={alcoholConsumption} onChange={(e) => setAlcoholConsumption(e.target.value)} />
+          Are you currently experiencing any erectile dysfunction or sexual health issues?
+            <select value={alcoholConsumption} onChange={(e) => setAlcoholConsumption(e.target.value)}>
+              <option value="">Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="unsure">Unsure</option>
+            </select>
           </label>
           <br />
           <label>
-            Have you experienced any significant changes in your weight recently?
-            <input type="text" value={weightChanges} onChange={(e) => setWeightChanges(e.target.value)} />
+          Are you currently taking any medications? If yes, please list them.
+            <input type="text" value={medications} onChange={(e) => setMedications(e.target.value)} />
           </label>
           <br />
           <label>
-            Do you have a family history of heart disease, high blood pressure, or diabetes?
-            <select value={familyHistory} onChange={(e) => setFamilyHistory(e.target.value)}>
+          Have you had any surgeries or medical procedures in the past year? If yes, please provide details.
+            <input type="text" value={surgeries} onChange={(e) => setSurgeries(e.target.value)} />
+          </label>
+          <br />
+          <label>
+          How would you describe your stress level?
+            <select value={stress} onChange={(e) => setStress(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -113,8 +141,8 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-            Have you ever had a colonoscopy or any other colorectal screening?
-            <select value={colonoscopyHistory} onChange={(e) => setColonoscopyHistory(e.target.value)}>
+          Are you experiencing any specific health concerns or symptoms currently? If yes, please describe.
+            <select value={healthConcerns} onChange={(e) => setHealthConcerns(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -122,8 +150,8 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-            Are you experiencing any gastrointestinal symptoms like bloating, abdominal pain, or changes in bowel habits?
-            <select value={gastroSymptoms} onChange={(e) => setGastroSymptoms(e.target.value)}>
+          Do you have a family history of any significant medical conditions? If yes, please specify.
+            <select value={history} onChange={(e) => setHistory(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -131,52 +159,21 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-            Have you ever been tested for sexually transmitted infections (STIs)? If so, when was your last test?
-            <input type="text" value={STITest} onChange={(e) => setSTITest(e.target.value)} />
+          How often do you visit a healthcare professional for check-ups?
+            <input type="text" value={checkups} onChange={(e) => setCheckups(e.target.value)} />
           </label>
           <br />
           <label>
-            Are you currently experiencing any respiratory symptoms like persistent coughing or shortness of breath?
-            <select value={respiratorySymptoms} onChange={(e) => setRespiratorySymptoms(e.target.value)}>
+          Are you up-to-date with your vaccinations? 
+            <select value={vaccinations} onChange={(e) => setVaccinations(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
+              <option value="unsure">Unsure</option>
             </select>
           </label>
           <br />
-          <label>
-            Have you ever had a bone density test (DEXA scan) to assess your bone health?
-            <select value={boneDensityTest} onChange={(e) => setBoneDensityTest(e.target.value)}>
-              <option value="">Select</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </label>
-          <br />
-          <label>
-            Are you experiencing any urinary changes, such as increased frequency, urgency, or pain?
-            <select value={urinaryChanges} onChange={(e) => setUrinaryChanges(e.target.value)}>
-              <option value="">Select</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </label>
-          <br />
-          <label>
-            Have you had a mammogram to screen for breast cancer? If yes, when was your last one?
-            <input type="text" value={mammogramHistory} onChange={(e) => setMammogramHistory(e.target.value)} />
-          </label>
-          <br />
-          <label>
-            Have you been screened for diabetes or had your blood sugar levels checked recently?
-            <select value={diabetesScreening} onChange={(e) => setDiabetesScreening(e.target.value)}>
-              <option value="">Select</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </label>
-          <br />
-          <button className="submit-button" type="submit">Submit</button>
+          <button className="submit-button" type="button">Submit</button>
         </form>
       </div>
     </div>

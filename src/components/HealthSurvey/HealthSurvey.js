@@ -176,7 +176,7 @@ const HealthSurvey = () => {
             </select>
           </label>
           <br />
-          <button className="submit-button" type="submit">Submit</button>
+          <button className="submit-button" type="button">Submit</button>
         </form>
       </div>
     </div>
