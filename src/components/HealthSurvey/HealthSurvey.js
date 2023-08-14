@@ -33,7 +33,6 @@ const HealthSurvey = () => {
 
   return (
     <div className="health-survey-container">
-      <Link to="/help" className="help-button">Help</Link>
       <h2 className="health-survey-header">Health Survey</h2>
       <div className="form-container">
         <form className="health-survey-form" onSubmit={handleSubmit}>
