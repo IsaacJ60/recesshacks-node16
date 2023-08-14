@@ -8,7 +8,7 @@ SurveyScreen is an AI-powered health web app designed to put you in control of y
 To build SurveyScreen, we used React for the UI, OpenAI API for generating the AI responses and recommendations, and hosted & deployed on Vercel.
 
 ## Challenges we ran into
-Our biggest challenge was obtaining the user's form results and feeding it into the OpenAI API. We solved this by...
+Our biggest challenge was obtaining the user's form results and feeding it into the OpenAI API. We solved this by making the surveys and AI response generation code parent-child components, and passed data using props.
 
 ## Accomplishments that we're proud of
 We are proud our ability to quickly learn and utilize React, a technology our team had no prior experience with. Moreover, the consistent and accurate recommendations from our utilization of OpenAI API led to a smooth and high-quality user experience.
