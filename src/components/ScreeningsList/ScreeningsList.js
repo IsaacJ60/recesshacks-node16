@@ -37,7 +37,7 @@ function parseScreeningData(data) {
 function ScreeningsList(props) {
   const { recommendations  } = props; 
 
-  const screenings = parseScreeningData(recommendations );
+  const screenings = parseScreeningData(recommendations);
 
   return (
     <div className="screenings-list">

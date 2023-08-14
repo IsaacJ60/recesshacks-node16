@@ -4,7 +4,7 @@ import { Configuration, OpenAIApi } from "openai"
 import React, { useState } from 'react';
 import './GeneralSurvey.css';
 import { useNavigate } from 'react-router-dom';
-import ScreeningList from './ScreeningsList/ScreeningsList.js';
+import ScreeningsList from '../ScreeningsList/ScreeningsList.js'; // Adjust the relative path as needed
 
 
 
@@ -100,7 +100,7 @@ const HealthSurvey = () => {
   }  
   
   
-  const [generatedRecommendations, setGeneratedRecommendations] = useState('');
+  const [gen, setGen] = useState('');
 
   const openAi = new OpenAIApi(
     new Configuration({
@@ -110,14 +110,16 @@ const HealthSurvey = () => {
   )
   
   const prompt = "You are a medical professional, what screenings would you recommend to a person who has answered the following medical survey?" + content1 + "Make sure everything you recommend is a screening, and strictly appropriate given their answers in the format 'Screening: [screening].' List a frequency of how often the patient should get the screening in a new line in the format 'Frequency: every 5 years.' Give a 1-sentence description of what the screening does/is for as well, and phrase it as if you are talking directly to the patient in the format 'Description: [description]'. Make sure it generates in the order: screening, frequency, description. Only recommend up to 5 screenings.";
-  const generateRecommendations = async (content) => {
-    (async () => {
+  const generateRecommendations = async (e) => {
+    (async (e) => {
+      e.preventDefault();
+
     const response = await openAi.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }],
     })
     console.log(response.data.choices[0].message.content)
-    setGeneratedRecommendations(response.data.choices[0].message.content);
+    setGen(response.data.choices[0].message.content);
 
     })();
 }
@@ -271,7 +273,7 @@ const HealthSurvey = () => {
           <button className="submit-button" type="submit" onClick={generateRecommendations}>Submit</button>
         </form>
       </div>
-      <ScreeningsList recommendations={generatedRecommendations} />
+      <ScreeningsList recommendations={gen} />
 
     </div>
   );
