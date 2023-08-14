@@ -2,7 +2,7 @@ import { config } from "dotenv"
 config()
 
 import { Configuration, OpenAIApi } from "openai"
-import readline from "readline"
+import fs from "fs"
 
 const openAi = new OpenAIApi(
   new Configuration({
@@ -10,19 +10,12 @@ const openAi = new OpenAIApi(
   })
 )
 
-console.log(process.env.API_KEY)
+const prompt = fs.readFileSync("src/form.txt", "utf-8");
 
-const userInterface = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-})
-
-userInterface.prompt()
-userInterface.on("line", async input => {
+(async () => {
   const response = await openAi.createChatCompletion({
     model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: input }],
+    messages: [{ role: "user", content: prompt }],
   })
   console.log(response.data.choices[0].message.content)
-  userInterface.prompt()
-})
+})();
