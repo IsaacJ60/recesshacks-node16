@@ -2,6 +2,7 @@ import React from 'react';
 import './ScreeningsList.css';
 
 // Sample screening data in the format: "Screening Name\nDescription\nFrequency"
+/*
 const screeningData = `
 1. Screening: Comprehensive Eye Exam
 Frequency: every 1-2 years
@@ -23,6 +24,7 @@ Description: A blood glucose test checks for diabetes or prediabetes, evaluating
 Frequency: every 4-6 years, or more frequently if indicated
 Description: A fasting lipid profile measures your cholesterol and triglyceride levels, aiding in the assessment of your cardiovascular health and risk for heart disease.
 `;
+*/
 
 function parseScreeningData(data) {
   const screeningsArray = data.trim().split('\n\n');
@@ -32,8 +34,10 @@ function parseScreeningData(data) {
   });
 }
 
-function ScreeningsList() {
-  const screenings = parseScreeningData(screeningData);
+function ScreeningsList(props) {
+  const { recommendations  } = props; 
+
+  const screenings = parseScreeningData(recommendations );
 
   return (
     <div className="screenings-list">
