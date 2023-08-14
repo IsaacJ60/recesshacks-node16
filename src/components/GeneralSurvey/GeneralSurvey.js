@@ -236,7 +236,7 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-          Are you experiencing any specific health concerns or symptoms currently? If yes, please describe.
+          Are you experiencing any specific health concerns or symptoms currently?
             <select value={healthConcerns} onChange={(e) => setHealthConcerns(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
@@ -245,7 +245,7 @@ const HealthSurvey = () => {
           </label>
           <br />
           <label>
-          Do you have a family history of any significant medical conditions? If yes, please specify.
+          Do you have a family history of any significant medical conditions?
             <select value={history} onChange={(e) => setHistory(e.target.value)}>
               <option value="">Select</option>
               <option value="yes">Yes</option>
