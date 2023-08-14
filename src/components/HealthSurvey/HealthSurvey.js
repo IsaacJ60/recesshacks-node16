@@ -14,7 +14,6 @@ const HealthSurvey = () => {
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
   const [cholesterolChecked, setCholesterolChecked] = useState('');
-  const [cholesterolLastChecked, setCholesterolLastChecked] = useState('');
   const [visionChanges, setVisionChanges] = useState('');
   const [exerciseFrequency, setExerciseFrequency] = useState('');
   const [skinChanges, setSkinChanges] = useState('');
@@ -176,7 +175,7 @@ const HealthSurvey = () => {
             </select>
           </label>
           <br />
-          <button className="submit-button" type="button">Submit</button>
+          <button className="submit-button" type="submit">Submit</button>
         </form>
       </div>
     </div>
