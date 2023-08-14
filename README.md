@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+## Inspiration
+The inspiration behind creating SurveyScreen stemmed from the aspiration to make personalized healthcare guidance accessible to all. With an abundance of medical screenings and tests available, it's easy to feel lost in a sea of options, and not know what is actually important to you.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What it does
+SurveyScreen is an AI-powered health web app designed to put you in control of your well-being journey. By simply taking our health survey, you'll unlock personalized AI-driven advice on the medical screenings you should be taking that could make all the difference.
 
-## Available Scripts
+## How we built it
+To build SurveyScreen, we used React for the UI, OpenAI API for generating the AI responses and recommendations, and hosted & deployed on Vercel.
 
-In the project directory, you can run:
+## Challenges we ran into
+Our biggest challenge was obtaining the user's form results and feeding it into the OpenAI API. We solved this by...
 
-### `npm start`
+## Accomplishments that we're proud of
+We are proud our ability to quickly learn and utilize React, a technology our team had no prior experience with. Moreover, the consistent and accurate recommendations from our utilization of OpenAI API led to a smooth and high-quality user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What we learned
+During the making of SurveyScreen, we gained invaluable knowledge on web-development, with React as a focal point. Additionally, we learned how to employ OpenAI API with JavaScript.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for SurveyScreen
+We plan to add a feature where the user can find medical offices where they can directly book appointments to get their screenings done. Another feature for the future would be for the user to add themselves to a family so we can use family/genetic history as another variable in what screenings to recommend.
