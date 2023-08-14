@@ -1,1 +1,37 @@
-hi who are you?
+Name: Jane Richardson
+
+Age: 40
+
+Sex: Female
+
+Have you ever had your cholesterol levels checked? If so, when was the last time and what was the level?: I had it checked last year. Total Cholesterol: 180 mg/dL LDL Cholesterol: 110 mg/dL HDL Cholesterol: 55 mg/dL
+
+Are you experiencing any changes in your vision, such as blurriness or difficulty focusing?: No
+
+How frequently do you engage in physical activity or exercise?: I do yoga once a week.
+
+Have you noticed any unusual moles or skin changes on your body?: No
+
+Are you a smoker, or have you ever smoked in the past?: No
+
+How often do you consume alcohol, and in what quantities?: I drink moderately on Fridays, Saturdays, and Sundays.
+
+Have you experienced any significant changes in your weight recently?: I have gained 10 pounds in the last 12 months.
+
+Do you have a family history of heart disease, high blood pressure, or diabetes?: No
+
+Have you ever had a colonoscopy or any other colorectal screening?: No
+
+Are you experiencing any gastrointestinal symptoms like bloating, abdominal pain, or changes in bowel habits?: Yes
+
+Have you ever been tested for sexually transmitted infections (STIs)? If so, when was your last test?: No
+
+Are you currently experiencing any respiratory symptoms like persistent coughing or shortness of breath?: No
+
+Have you ever had a bone density test (DEXA scan) to assess your bone health?: No
+
+Are you experiencing any urinary changes, such as increased frequency, urgency, or pain?: No
+
+Have you had a mammogram to screen for breast cancer? If yes, when was your last one?: No
+
+Have you been screened for diabetes or had your blood sugar levels checked recently?: No
