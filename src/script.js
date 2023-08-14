@@ -10,7 +10,7 @@ const openAi = new OpenAIApi(
   })
 )
 
-const prompt = "You are a medical professional, what screenings would you recommend to a person who has answered the following medical survey?" + fs.readFileSync("src/form.txt", "utf-8") + "Make sure everything you recommend is a screening, and strictly appropriate given their answers. Give a quick description of what the screening does/is for as well, and phrase it as if you are talking directly to the patient. **Only recommend up to 5 screenings.** Do not write any pretext or post-text, only the list of screenings.";
+const prompt = "You are a medical professional, what screenings would you recommend to a person who has answered the following medical survey?" + fs.readFileSync("src/form.txt", "utf-8") + "Make sure everything you recommend is a screening, and strictly appropriate given their answers in the format 'Screening: [screening].' List a frequency of how often the patient should get the screening in a new line in the format 'Frequency: every 5 years.' Give a 1-sentence description of what the screening does/is for as well, and phrase it as if you are talking directly to the patient in the format 'Description: [description]'. Make sure it generates in the order: screening, frequency, description. Only recommend up to 5 screenings.";
 
 (async () => {
   const response = await openAi.createChatCompletion({
